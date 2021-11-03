@@ -1,0 +1,1124 @@
+28-Oct-2021 14:50:55 INFO - Starting UserMsApplication using Java 16.0.2 on KANU with PID 5948 (D:\userMS\target\classes started by HP in D:\userMS)
+28-Oct-2021 14:50:55 INFO - No active profile set, falling back to default profiles: default
+28-Oct-2021 14:50:56 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+28-Oct-2021 14:50:56 INFO - Finished Spring Data repository scanning in 47 ms. Found 4 JPA repository interfaces.
+28-Oct-2021 14:50:56 INFO - Tomcat initialized with port(s): 8100 (http)
+28-Oct-2021 14:50:56 INFO - Initializing ProtocolHandler ["http-nio-8100"]
+28-Oct-2021 14:50:56 INFO - Starting service [Tomcat]
+28-Oct-2021 14:50:56 INFO - Starting Servlet engine: [Apache Tomcat/9.0.54]
+28-Oct-2021 14:50:57 INFO - Initializing Spring embedded WebApplicationContext
+28-Oct-2021 14:50:57 INFO - Root WebApplicationContext: initialization completed in 1895 ms
+28-Oct-2021 14:50:57 INFO - HikariPool-1 - Starting...
+28-Oct-2021 14:50:58 ERROR - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:?]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159) ~[spring-jdbc-5.3.12.jar:5.3.12]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117) ~[spring-jdbc-5.3.12.jar:5.3.12]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[spring-jdbc-5.3.12.jar:5.3.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:330) ~[spring-jdbc-5.3.12.jar:5.3.12]
+	at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:184) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateDefaultDdlAutoProvider.getDefaultDdlAuto(HibernateDefaultDdlAutoProvider.java:42) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.lambda$getVendorProperties$1(HibernateJpaConfiguration.java:130) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings.getDdlAuto(HibernateSettings.java:41) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineDdlAuto(HibernateProperties.java:143) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.getAdditionalProperties(HibernateProperties.java:103) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineHibernateProperties(HibernateProperties.java:95) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.getVendorProperties(HibernateJpaConfiguration.java:132) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:132) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) [spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) [spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) [spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.6.jar:2.5.6]
+	at com.FA.userMS.UserMsApplication.main(UserMsApplication.java:10) [classes/:?]
+28-Oct-2021 14:50:58 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+28-Oct-2021 14:50:58 INFO - HHH000412: Hibernate ORM core version 5.4.32.Final
+28-Oct-2021 14:50:58 INFO - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+28-Oct-2021 14:50:58 INFO - HikariPool-1 - Starting...
+28-Oct-2021 14:50:59 ERROR - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:?]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.12.jar:5.3.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.12.jar:5.3.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.12.jar:5.3.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.12.jar:5.3.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) [spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) [spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) [spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.6.jar:2.5.6]
+	at com.FA.userMS.UserMsApplication.main(UserMsApplication.java:10) [classes/:?]
+28-Oct-2021 14:50:59 WARN - HHH000342: Could not obtain connection to query metadata
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:?]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.12.jar:5.3.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.12.jar:5.3.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.12.jar:5.3.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.12.jar:5.3.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) [spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) [spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) [spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.6.jar:2.5.6]
+	at com.FA.userMS.UserMsApplication.main(UserMsApplication.java:10) [classes/:?]
+28-Oct-2021 14:50:59 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+28-Oct-2021 14:51:00 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+28-Oct-2021 14:51:00 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+28-Oct-2021 14:51:01 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+28-Oct-2021 14:51:01 INFO - Starting ProtocolHandler ["http-nio-8100"]
+28-Oct-2021 14:51:01 INFO - Tomcat started on port(s): 8100 (http) with context path ''
+28-Oct-2021 14:51:01 INFO - Started UserMsApplication in 7.13 seconds (JVM running for 8.347)
+28-Oct-2021 14:52:18 INFO - Application shutdown requested.
+28-Oct-2021 14:52:18 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+28-Oct-2021 14:52:24 INFO - Starting UserMsApplication using Java 16.0.2 on KANU with PID 13148 (D:\userMS\target\classes started by HP in D:\userMS)
+28-Oct-2021 14:52:24 INFO - No active profile set, falling back to default profiles: default
+28-Oct-2021 14:52:25 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+28-Oct-2021 14:52:25 INFO - Finished Spring Data repository scanning in 60 ms. Found 4 JPA repository interfaces.
+28-Oct-2021 14:52:26 INFO - Tomcat initialized with port(s): 8100 (http)
+28-Oct-2021 14:52:26 INFO - Initializing ProtocolHandler ["http-nio-8100"]
+28-Oct-2021 14:52:26 INFO - Starting service [Tomcat]
+28-Oct-2021 14:52:26 INFO - Starting Servlet engine: [Apache Tomcat/9.0.54]
+28-Oct-2021 14:52:26 INFO - Initializing Spring embedded WebApplicationContext
+28-Oct-2021 14:52:26 INFO - Root WebApplicationContext: initialization completed in 2651 ms
+28-Oct-2021 14:52:27 INFO - HikariPool-1 - Starting...
+28-Oct-2021 14:52:28 ERROR - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:?]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159) ~[spring-jdbc-5.3.12.jar:5.3.12]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117) ~[spring-jdbc-5.3.12.jar:5.3.12]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[spring-jdbc-5.3.12.jar:5.3.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:330) ~[spring-jdbc-5.3.12.jar:5.3.12]
+	at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:184) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateDefaultDdlAutoProvider.getDefaultDdlAuto(HibernateDefaultDdlAutoProvider.java:42) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.lambda$getVendorProperties$1(HibernateJpaConfiguration.java:130) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings.getDdlAuto(HibernateSettings.java:41) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineDdlAuto(HibernateProperties.java:143) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.getAdditionalProperties(HibernateProperties.java:103) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineHibernateProperties(HibernateProperties.java:95) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.getVendorProperties(HibernateJpaConfiguration.java:132) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:132) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) [spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) [spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) [spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.6.jar:2.5.6]
+	at com.FA.userMS.UserMsApplication.main(UserMsApplication.java:10) [classes/:?]
+28-Oct-2021 14:52:28 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+28-Oct-2021 14:52:28 INFO - HHH000412: Hibernate ORM core version 5.4.32.Final
+28-Oct-2021 14:52:28 INFO - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+28-Oct-2021 14:52:28 INFO - HikariPool-1 - Starting...
+28-Oct-2021 14:52:29 ERROR - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:?]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.12.jar:5.3.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.12.jar:5.3.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.12.jar:5.3.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.12.jar:5.3.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) [spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) [spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) [spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.6.jar:2.5.6]
+	at com.FA.userMS.UserMsApplication.main(UserMsApplication.java:10) [classes/:?]
+28-Oct-2021 14:52:29 WARN - HHH000342: Could not obtain connection to query metadata
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:?]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.12.jar:5.3.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.12.jar:5.3.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.12.jar:5.3.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.12.jar:5.3.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) [spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) [spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) [spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.6.jar:2.5.6]
+	at com.FA.userMS.UserMsApplication.main(UserMsApplication.java:10) [classes/:?]
+28-Oct-2021 14:52:29 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+28-Oct-2021 14:52:30 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+28-Oct-2021 14:52:30 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+28-Oct-2021 14:52:30 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+28-Oct-2021 14:52:31 INFO - Starting ProtocolHandler ["http-nio-8100"]
+28-Oct-2021 14:52:31 INFO - Tomcat started on port(s): 8100 (http) with context path ''
+28-Oct-2021 14:52:31 INFO - Started UserMsApplication in 7.32 seconds (JVM running for 9.193)
+28-Oct-2021 14:52:49 INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+28-Oct-2021 14:52:49 INFO - Initializing Servlet 'dispatcherServlet'
+28-Oct-2021 14:52:49 INFO - Completed initialization in 2 ms
+28-Oct-2021 15:20:32 INFO - Application shutdown requested.
+28-Oct-2021 15:20:32 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+28-Oct-2021 15:20:42 INFO - Starting UserMsApplication using Java 16.0.2 on KANU with PID 13916 (D:\userMS\target\classes started by HP in D:\userMS)
+28-Oct-2021 15:20:42 INFO - No active profile set, falling back to default profiles: default
+28-Oct-2021 15:20:43 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+28-Oct-2021 15:20:43 INFO - Finished Spring Data repository scanning in 71 ms. Found 4 JPA repository interfaces.
+28-Oct-2021 15:20:45 INFO - Tomcat initialized with port(s): 8100 (http)
+28-Oct-2021 15:20:45 INFO - Initializing ProtocolHandler ["http-nio-8100"]
+28-Oct-2021 15:20:45 INFO - Starting service [Tomcat]
+28-Oct-2021 15:20:45 INFO - Starting Servlet engine: [Apache Tomcat/9.0.54]
+28-Oct-2021 15:20:45 INFO - Initializing Spring embedded WebApplicationContext
+28-Oct-2021 15:20:45 INFO - Root WebApplicationContext: initialization completed in 3110 ms
+28-Oct-2021 15:20:45 INFO - HikariPool-1 - Starting...
+28-Oct-2021 15:20:46 INFO - HikariPool-1 - Start completed.
+28-Oct-2021 15:20:46 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+28-Oct-2021 15:20:46 INFO - HHH000412: Hibernate ORM core version 5.4.32.Final
+28-Oct-2021 15:20:47 INFO - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+28-Oct-2021 15:20:47 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+28-Oct-2021 15:20:48 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+28-Oct-2021 15:20:48 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+28-Oct-2021 15:20:48 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+28-Oct-2021 15:20:49 INFO - Starting ProtocolHandler ["http-nio-8100"]
+28-Oct-2021 15:20:49 INFO - Tomcat started on port(s): 8100 (http) with context path ''
+28-Oct-2021 15:20:49 INFO - Started UserMsApplication in 8.616 seconds (JVM running for 11.475)
+28-Oct-2021 16:24:20 INFO - Application shutdown requested.
+28-Oct-2021 16:24:20 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+28-Oct-2021 16:24:20 INFO - HikariPool-1 - Shutdown initiated...
+28-Oct-2021 16:24:20 INFO - HikariPool-1 - Shutdown completed.
+28-Oct-2021 16:24:27 INFO - Starting UserMsApplication using Java 16.0.2 on KANU with PID 23656 (D:\userMS\target\classes started by HP in D:\userMS)
+28-Oct-2021 16:24:27 INFO - No active profile set, falling back to default profiles: default
+28-Oct-2021 16:24:28 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+28-Oct-2021 16:24:28 INFO - Finished Spring Data repository scanning in 67 ms. Found 4 JPA repository interfaces.
+28-Oct-2021 16:24:29 INFO - Tomcat initialized with port(s): 8100 (http)
+28-Oct-2021 16:24:29 INFO - Initializing ProtocolHandler ["http-nio-8100"]
+28-Oct-2021 16:24:29 INFO - Starting service [Tomcat]
+28-Oct-2021 16:24:29 INFO - Starting Servlet engine: [Apache Tomcat/9.0.54]
+28-Oct-2021 16:24:29 INFO - Initializing Spring embedded WebApplicationContext
+28-Oct-2021 16:24:29 INFO - Root WebApplicationContext: initialization completed in 1774 ms
+28-Oct-2021 16:24:29 INFO - HikariPool-1 - Starting...
+28-Oct-2021 16:24:29 INFO - HikariPool-1 - Start completed.
+28-Oct-2021 16:24:29 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+28-Oct-2021 16:24:30 INFO - HHH000412: Hibernate ORM core version 5.4.32.Final
+28-Oct-2021 16:24:30 INFO - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+28-Oct-2021 16:24:30 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+28-Oct-2021 16:24:31 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+28-Oct-2021 16:24:31 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+28-Oct-2021 16:24:31 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+28-Oct-2021 16:24:32 INFO - Starting ProtocolHandler ["http-nio-8100"]
+28-Oct-2021 16:24:32 INFO - Tomcat started on port(s): 8100 (http) with context path ''
+28-Oct-2021 16:24:32 INFO - Started UserMsApplication in 5.028 seconds (JVM running for 6.325)
+28-Oct-2021 16:24:50 INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+28-Oct-2021 16:24:50 INFO - Initializing Servlet 'dispatcherServlet'
+28-Oct-2021 16:24:50 INFO - Completed initialization in 4 ms
+28-Oct-2021 17:39:14 INFO - Application shutdown requested.
+28-Oct-2021 17:39:15 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+28-Oct-2021 17:39:15 INFO - HikariPool-1 - Shutdown initiated...
+28-Oct-2021 17:39:15 INFO - HikariPool-1 - Shutdown completed.
+29-Oct-2021 09:43:39 INFO - Starting UserMsApplication using Java 16.0.2 on Viru with PID 8636 (C:\Users\Virender Pal Singh\Desktop\infosys project\e-cart\userMS\target\classes started by Virender Pal Singh in C:\Users\Virender Pal Singh\Desktop\infosys project\e-cart\userMS)
+29-Oct-2021 09:43:39 INFO - No active profile set, falling back to default profiles: default
+29-Oct-2021 09:43:40 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+29-Oct-2021 09:43:40 INFO - Finished Spring Data repository scanning in 106 ms. Found 4 JPA repository interfaces.
+29-Oct-2021 09:43:41 INFO - Tomcat initialized with port(s): 8100 (http)
+29-Oct-2021 09:43:41 INFO - Initializing ProtocolHandler ["http-nio-8100"]
+29-Oct-2021 09:43:41 INFO - Starting service [Tomcat]
+29-Oct-2021 09:43:41 INFO - Starting Servlet engine: [Apache Tomcat/9.0.54]
+29-Oct-2021 09:43:41 INFO - Initializing Spring embedded WebApplicationContext
+29-Oct-2021 09:43:41 INFO - Root WebApplicationContext: initialization completed in 2531 ms
+29-Oct-2021 09:43:41 INFO - HikariPool-1 - Starting...
+29-Oct-2021 09:43:42 INFO - HikariPool-1 - Start completed.
+29-Oct-2021 09:43:42 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+29-Oct-2021 09:43:42 INFO - HHH000412: Hibernate ORM core version 5.4.32.Final
+29-Oct-2021 09:43:42 INFO - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+29-Oct-2021 09:43:42 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+29-Oct-2021 09:43:43 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+29-Oct-2021 09:43:43 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+29-Oct-2021 09:43:44 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+29-Oct-2021 09:43:45 INFO - Starting ProtocolHandler ["http-nio-8100"]
+29-Oct-2021 09:43:45 INFO - Tomcat started on port(s): 8100 (http) with context path ''
+29-Oct-2021 09:43:45 INFO - Started UserMsApplication in 7.239 seconds (JVM running for 9.286)
+29-Oct-2021 09:50:07 INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+29-Oct-2021 09:50:07 INFO - Initializing Servlet 'dispatcherServlet'
+29-Oct-2021 09:50:07 INFO - Completed initialization in 3 ms
+29-Oct-2021 12:14:55 INFO - Application shutdown requested.
+29-Oct-2021 12:14:56 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+29-Oct-2021 12:14:56 INFO - HikariPool-1 - Shutdown initiated...
+29-Oct-2021 12:14:56 INFO - HikariPool-1 - Shutdown completed.
+29-Oct-2021 15:24:24 INFO - Starting UserMsApplication using Java 16.0.2 on Viru with PID 1584 (C:\Users\Virender Pal Singh\Desktop\infosys project\e-cart\userMS\target\classes started by Virender Pal Singh in C:\Users\Virender Pal Singh\Desktop\infosys project\e-cart\userMS)
+29-Oct-2021 15:24:24 INFO - No active profile set, falling back to default profiles: default
+29-Oct-2021 15:24:25 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+29-Oct-2021 15:24:25 INFO - Finished Spring Data repository scanning in 117 ms. Found 4 JPA repository interfaces.
+29-Oct-2021 15:24:27 INFO - Tomcat initialized with port(s): 8100 (http)
+29-Oct-2021 15:24:27 INFO - Initializing ProtocolHandler ["http-nio-8100"]
+29-Oct-2021 15:24:27 INFO - Starting service [Tomcat]
+29-Oct-2021 15:24:27 INFO - Starting Servlet engine: [Apache Tomcat/9.0.54]
+29-Oct-2021 15:24:28 INFO - Initializing Spring embedded WebApplicationContext
+29-Oct-2021 15:24:28 INFO - Root WebApplicationContext: initialization completed in 3877 ms
+29-Oct-2021 15:24:28 INFO - HikariPool-1 - Starting...
+29-Oct-2021 15:24:28 INFO - HikariPool-1 - Start completed.
+29-Oct-2021 15:24:28 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+29-Oct-2021 15:24:28 INFO - HHH000412: Hibernate ORM core version 5.4.32.Final
+29-Oct-2021 15:24:29 INFO - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+29-Oct-2021 15:24:29 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+29-Oct-2021 15:24:30 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+29-Oct-2021 15:24:31 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+29-Oct-2021 15:24:32 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+29-Oct-2021 15:24:33 INFO - Starting ProtocolHandler ["http-nio-8100"]
+29-Oct-2021 15:24:33 INFO - Tomcat started on port(s): 8100 (http) with context path ''
+29-Oct-2021 15:24:33 INFO - Started UserMsApplication in 10.353 seconds (JVM running for 15.376)
+29-Oct-2021 15:50:03 INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+29-Oct-2021 15:50:03 INFO - Initializing Servlet 'dispatcherServlet'
+29-Oct-2021 15:50:03 INFO - Completed initialization in 3 ms
+29-Oct-2021 15:50:03 INFO - ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	internal.auto.downgrade.txn.commit = true
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+29-Oct-2021 15:50:03 INFO - Kafka version: 2.7.1
+29-Oct-2021 15:50:03 INFO - Kafka commitId: 61dbce85d0d41457
+29-Oct-2021 15:50:03 INFO - Kafka startTimeMs: 1635502803342
+29-Oct-2021 15:50:04 INFO - [Producer clientId=producer-1] Cluster ID: CXu9OvtcQLqJW75Wb8TDiQ
+29-Oct-2021 16:06:23 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:06:25 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:06:28 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:06:30 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:06:33 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:06:36 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:06:39 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:06:42 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:06:45 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:06:48 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:06:52 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:06:55 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:06:58 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:07:01 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:07:04 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:07:07 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:07:10 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:07:13 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:07:16 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:07:19 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:07:22 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:07:25 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:07:29 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:07:32 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:07:35 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:07:38 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:07:41 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:07:44 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:07:47 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:07:50 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:07:53 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:07:56 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:07:59 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:08:02 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:08:05 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:08:08 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:08:11 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:08:14 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:08:18 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:08:21 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:08:24 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:08:27 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:08:30 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:08:33 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:08:37 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:08:40 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:08:43 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:08:46 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:08:49 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:08:52 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:08:55 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:08:58 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:09:01 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:09:04 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:09:07 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:09:10 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:09:13 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:09:16 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:09:19 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:09:22 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:09:26 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:09:29 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:09:32 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:09:35 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:09:38 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:09:41 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:09:44 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:09:47 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:09:50 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:09:53 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:09:57 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:10:00 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:10:03 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:10:05 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:10:09 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:10:12 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:10:14 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:10:17 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:10:20 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:10:24 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:10:27 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:10:30 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:10:33 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:10:36 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:10:39 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:10:42 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:10:45 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:10:48 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:10:51 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:10:54 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:10:57 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:11:00 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:11:03 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:11:06 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:11:10 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:11:13 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:11:16 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:11:19 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:11:22 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:11:25 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:11:28 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:11:31 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:11:34 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:11:37 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:11:40 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:11:43 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:11:46 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:11:49 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:11:52 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:11:55 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:11:58 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:12:01 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:12:04 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:12:07 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:12:11 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:12:14 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:12:17 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:12:20 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:12:23 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:12:26 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:12:28 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:12:31 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:12:35 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:12:38 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:12:41 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:12:44 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:12:47 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:12:50 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:12:53 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:12:56 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:12:59 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:13:02 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:13:06 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:13:09 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:13:11 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:13:15 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:13:18 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:13:21 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:13:24 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:13:27 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:13:30 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:13:33 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:13:36 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:13:39 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:13:42 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:13:45 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:13:48 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:13:51 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:13:54 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:13:57 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:14:00 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:14:03 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:14:06 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:14:09 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:14:12 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:14:15 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:14:18 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:14:21 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:14:24 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:14:28 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:14:31 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:14:34 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:14:37 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:14:40 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:14:43 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:14:46 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:14:49 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:14:52 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:14:55 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:14:58 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:15:01 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:15:04 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:15:07 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:15:10 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:15:13 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:15:16 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:15:19 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:15:23 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:15:26 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:15:29 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:15:32 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:15:35 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:15:38 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:15:41 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:15:44 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:15:47 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:15:50 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:15:54 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:15:57 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:16:00 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:16:03 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:16:06 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:16:09 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:16:12 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:16:15 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:16:18 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:16:21 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:16:24 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:16:27 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:16:30 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:16:33 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:16:36 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:16:39 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:16:42 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:16:46 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:16:48 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:16:51 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:16:55 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:16:58 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:17:00 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:17:03 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:17:06 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:17:10 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:17:13 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:17:16 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:17:19 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:17:22 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:17:25 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:17:28 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:17:31 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:17:34 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:17:37 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:17:40 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:17:43 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:17:46 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:17:50 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:17:52 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:17:56 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:17:59 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:18:02 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:18:05 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:18:08 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:18:11 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:18:14 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:18:17 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:18:20 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:18:23 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:18:26 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:18:29 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:18:33 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:18:36 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:18:39 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:18:42 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:18:45 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:18:48 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:18:51 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:18:54 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:18:57 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:19:00 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:19:03 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:19:06 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:19:09 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:19:12 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:19:16 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:19:19 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:19:22 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:19:25 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:19:28 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:19:31 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:19:34 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:19:37 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:19:40 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:19:43 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:19:47 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:19:50 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:19:53 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:19:56 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:19:59 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:20:02 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:20:05 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:20:08 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:20:11 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:20:14 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:20:17 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:20:20 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:20:23 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:20:26 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:20:30 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:20:32 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:20:35 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:20:39 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:20:42 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:20:45 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:20:48 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:20:51 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:20:54 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:20:57 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:21:00 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:21:03 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:21:06 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:21:09 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:21:12 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:21:15 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:21:18 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:21:21 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:21:24 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:21:27 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:21:30 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:21:33 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:21:36 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:21:39 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:21:42 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:21:45 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:21:49 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:21:51 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:21:54 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:21:57 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:22:00 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:22:03 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:22:06 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:22:09 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:22:12 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:22:15 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:22:18 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:22:22 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:22:25 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:22:28 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:22:30 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:22:34 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:22:37 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:22:40 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:22:43 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:22:46 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:22:49 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:22:52 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:22:56 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:22:59 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:23:02 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:23:05 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:23:08 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:23:11 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:23:14 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:23:18 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:23:20 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:23:23 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:23:26 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:23:29 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:23:33 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:23:35 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:23:39 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:23:42 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:23:45 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:23:48 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:23:51 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:23:54 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:23:57 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:24:00 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:24:03 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:24:06 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:24:09 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:24:12 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:24:15 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:24:18 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:24:21 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:24:24 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:24:27 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:24:30 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:24:33 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:24:36 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:24:39 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:24:42 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:24:45 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:24:48 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:24:51 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:24:55 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:24:58 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:25:01 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:25:04 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:25:07 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:25:10 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:25:13 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:25:16 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:25:19 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:25:22 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:25:25 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:25:29 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:25:32 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:25:35 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:25:38 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:25:41 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:25:44 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:25:48 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:25:51 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:25:54 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:25:57 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:26:00 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:26:04 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:26:07 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:26:10 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:26:14 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:26:17 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:26:20 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:26:23 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:26:26 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:26:29 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:26:33 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:26:35 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:26:38 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:26:42 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:26:45 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:26:48 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:26:51 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:26:54 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:26:57 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:27:00 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:27:03 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:27:06 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:27:09 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:27:12 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:27:16 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:27:19 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:27:22 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:27:25 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:27:28 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:27:31 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:27:34 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:27:37 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:27:40 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:27:43 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:27:46 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:27:49 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:27:52 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:27:56 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:27:59 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:28:02 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:28:04 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:28:08 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:28:11 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:28:14 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:28:17 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:28:20 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:28:23 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:28:26 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:28:29 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:28:32 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:28:35 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:28:38 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:28:41 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:28:44 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:28:47 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:28:50 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:28:54 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:28:57 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:29:00 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:29:03 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:29:06 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:29:09 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:29:12 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:29:15 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:29:18 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:29:22 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:29:25 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:29:28 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:29:31 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:29:34 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:29:37 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:29:40 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:29:44 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:29:47 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:29:50 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:29:53 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:29:57 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:30:00 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:30:03 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:30:06 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:30:09 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:30:12 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:30:15 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:30:18 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:30:21 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:30:24 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:30:27 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:30:30 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:30:33 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:30:37 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:30:40 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:30:43 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:30:46 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:30:49 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:30:53 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:30:55 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:30:59 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:31:02 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:31:05 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:31:08 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:31:11 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:31:14 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:31:17 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:31:20 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:31:23 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:31:26 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:31:29 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:31:32 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:31:35 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:31:38 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:31:41 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:31:44 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:31:47 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:31:50 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:31:53 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:31:56 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:31:59 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:32:02 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:32:05 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:32:08 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:32:11 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:32:14 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:32:18 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:32:21 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:32:24 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:32:27 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:32:30 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:32:33 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:32:36 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:32:39 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:32:42 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:32:45 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:32:48 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:32:51 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:32:54 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:32:58 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:33:01 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:33:04 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:33:07 WARN - [Producer clientId=producer-1] Connection to node 0 (Viru/192.168.0.120:9092) could not be established. Broker may not be available.
+29-Oct-2021 16:33:09 INFO - Application shutdown requested.
+29-Oct-2021 16:33:09 INFO - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+29-Oct-2021 16:33:09 INFO - Metrics scheduler closed
+29-Oct-2021 16:33:09 INFO - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+29-Oct-2021 16:33:09 INFO - Metrics reporters closed
+29-Oct-2021 16:33:09 INFO - App info kafka.producer for producer-1 unregistered
+29-Oct-2021 16:33:09 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+29-Oct-2021 16:33:09 INFO - HikariPool-1 - Shutdown initiated...
+29-Oct-2021 16:33:09 INFO - HikariPool-1 - Shutdown completed.
+29-Oct-2021 16:33:19 INFO - Starting UserMsApplication using Java 16.0.2 on Viru with PID 1072 (C:\Users\Virender Pal Singh\Desktop\infosys project\e-cart\userMS\target\classes started by Virender Pal Singh in C:\Users\Virender Pal Singh\Desktop\infosys project\e-cart\userMS)
+29-Oct-2021 16:33:19 INFO - No active profile set, falling back to default profiles: default
+29-Oct-2021 16:33:20 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+29-Oct-2021 16:33:21 INFO - Finished Spring Data repository scanning in 128 ms. Found 4 JPA repository interfaces.
+29-Oct-2021 16:33:23 INFO - Tomcat initialized with port(s): 8100 (http)
+29-Oct-2021 16:33:23 INFO - Initializing ProtocolHandler ["http-nio-8100"]
+29-Oct-2021 16:33:23 INFO - Starting service [Tomcat]
+29-Oct-2021 16:33:23 INFO - Starting Servlet engine: [Apache Tomcat/9.0.54]
+29-Oct-2021 16:33:23 INFO - Initializing Spring embedded WebApplicationContext
+29-Oct-2021 16:33:23 INFO - Root WebApplicationContext: initialization completed in 4214 ms
+29-Oct-2021 16:33:23 INFO - HikariPool-1 - Starting...
+29-Oct-2021 16:33:24 INFO - HikariPool-1 - Start completed.
+29-Oct-2021 16:33:24 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+29-Oct-2021 16:33:24 INFO - HHH000412: Hibernate ORM core version 5.4.32.Final
+29-Oct-2021 16:33:24 INFO - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+29-Oct-2021 16:33:25 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+29-Oct-2021 16:33:26 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+29-Oct-2021 16:33:26 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+29-Oct-2021 16:33:28 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+29-Oct-2021 16:33:29 INFO - Starting ProtocolHandler ["http-nio-8100"]
+29-Oct-2021 16:33:29 INFO - Tomcat started on port(s): 8100 (http) with context path ''
+29-Oct-2021 16:33:29 INFO - Started UserMsApplication in 11.504 seconds (JVM running for 15.406)
+29-Oct-2021 16:33:33 INFO - Application shutdown requested.
+29-Oct-2021 16:33:33 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+29-Oct-2021 16:33:33 INFO - HikariPool-1 - Shutdown initiated...
+29-Oct-2021 16:33:33 INFO - HikariPool-1 - Shutdown completed.
