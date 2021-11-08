@@ -217,5 +217,18 @@ public class UserControllerClass {
 		}
 	}
 	
+	@GetMapping(value = "/userMS/order/status/{orderId}/{status}")
+	public ResponseEntity<String> UserOrderStatus(@PathVariable String orderId,
+			@PathVariable String status) throws UserExceptionClass {
+		try {
+			String result = new RestTemplate().getForObject("http://localhost:8300/" + "order/status/" + orderId + "/" + status, String.class);
+			return new ResponseEntity<String>(result, HttpStatus.OK);
+		} catch (Exception e) {
+
+			return new ResponseEntity<String>(e.getMessage(), HttpStatus.NOT_FOUND);
+
+		}
 	
+	
+}
 }
